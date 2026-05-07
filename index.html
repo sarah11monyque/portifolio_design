@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="pt-BR" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarah Monyque - Portfólio</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&amp;family=Outfit:wght@200;300;400;500;600&amp;display=swap" rel="stylesheet">
+  <style>
+    html, body { height: 100%; margin: 0; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-body { font-family: 'Outfit', sans-serif; }
+    .page { min-height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+    .glass-card { background: rgba(74, 13, 31, 0.15); backdrop-filter: blur(10px); border: 1px solid rgba(245, 230, 211, 0.1); }
+    .glow { box-shadow: 0 0 60px rgba(107, 16, 42, 0.3); }
+    .shine { background: linear-gradient(135deg, rgba(245,230,211,0.05) 0%, transparent 50%); }
+    .skill-bar { background: linear-gradient(90deg, #6B102A, #4A0D1F); border-radius: 20px; height: 6px; transition: width 1s ease; }
+    .nav-dot { width: 10px; height: 10px; border-radius: 50%; border: 1.5px solid #F5E6D3; cursor: pointer; transition: all 0.3s; }
+    .nav-dot.active { background: #F5E6D3; transform: scale(1.3); }
+    .page-container { scroll-behavior: smooth; overflow-y: auto; height: 100%; }
+    .subtle-grid { background-image: linear-gradient(rgba(245,230,211,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(245,230,211,0.03) 1px, transparent 1px); background-size: 60px 60px; }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    .fade-up { animation: fadeUp 0.8s ease forwards; }
+    .mockup-notebook { width: 280px; height: 180px; background: linear-gradient(145deg, #1a1a1a, #2a2a2a); border-radius: 12px; border: 2px solid rgba(245,230,211,0.1); position: relative; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+    .mockup-notebook::after { content: ''; position: absolute; bottom: -8px; left: 20%; width: 60%; height: 6px; background: #2a2a2a; border-radius: 0 0 4px 4px; }
+    .mockup-phone { width: 140px; height: 260px; background: linear-gradient(145deg, #1a1a1a, #222); border-radius: 24px; border: 2px solid rgba(245,230,211,0.1); position: relative; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+    .mockup-phone::before { content: ''; position: absolute; top: 10px; left: 50%; transform: translateX(-50%); width: 40px; height: 4px; background: #333; border-radius: 4px; }
+    .project-area { width: 100%; height: 240px; background: linear-gradient(135deg, #1a1a1a, #2a2020); border: 1px solid rgba(245,230,211,0.08); border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+  </style>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bordo: '#4A0D1F',
+            vinho: '#6B102A',
+            creme: '#F5E6D3',
+            bege: '#EAD7C3',
+            preto: '#111111'
+          }
+        }
+      }
+    }
+  </script>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full bg-preto font-body text-creme">
+  <div class="page-container" id="portfolio"><!-- NAV DOTS -->
+   <nav class="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3" id="nav-dots"></nav><!-- PAGE 1: CAPA -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 30% 50%, rgba(74,13,31,0.4) 0%, #111111 70%);">
+    <div class="absolute inset-0 shine"></div>
+    <div class="text-center fade-up relative z-10 px-4">
+     <div class="mb-6 flex justify-center">
+      <img src="logo.jpg" alt="Logo Sarah Monyque" class="w-32 h-32 md:w-40 md:h-40 object-cover rounded-full shadow-[0_0_40px_rgba(107,16,42,0.6)] border border-creme/20 glow" />
+     </div>
+     <p class="font-body text-sm tracking-[0.4em] text-bege/60 mb-6 uppercase">Designer Gráfica &amp; Identidade Visual</p>
+     <h1 class="font-display text-5xl md:text-7xl font-900 tracking-tight mb-3" id="el-hero-title">PORTFÓLIO CRIATIVO</h1>
+     <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-creme/40 to-transparent mx-auto my-6"></div>
+     <h2 class="font-display text-2xl md:text-4xl font-600 italic text-bege" id="el-hero-name">SARAH MONYQUE</h2>
+     <div class="mt-12 flex justify-center">
+      <div class="mockup-notebook glow flex items-center justify-center">
+       <div class="w-[85%] h-[75%] rounded bg-gradient-to-br from-bordo/30 to-preto flex items-center justify-center"><span class="font-display text-creme/30 text-xs tracking-widest">DESIGN</span>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- PAGE 2: SOBRE MIM -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 70% 40%, rgba(107,16,42,0.3) 0%, #111111 70%);">
+    <div class="max-w-5xl mx-auto px-8 flex flex-col md:flex-row items-center gap-12 fade-up">
+     <div class="flex-1">
+      <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3">Conheça</p>
+      <h2 class="font-display text-4xl md:text-5xl font-800 mb-6">SOBRE MIM</h2>
+      <div class="w-12 h-[2px] bg-vinho mb-6"></div>
+      <p class="text-bege/80 leading-relaxed text-base" id="el-about-text">Designer apaixonada por transformar ideias em identidades visuais marcantes. Especializada em criar artes modernas, sofisticadas e estratégicas para marcas e redes sociais.</p>
+     </div>
+     <div class="flex-shrink-0 relative group">
+      <div class="w-52 h-64 md:w-64 md:h-80 rounded-2xl glass-card glow flex items-center justify-center overflow-hidden border border-creme/10">
+       <img src="profile.jpg" alt="Sarah Monyque" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+      </div>
+      <div class="absolute -top-4 -right-4 w-20 h-20 border border-creme/10 rounded-full transition-transform duration-700 group-hover:rotate-45"></div>
+      <div class="absolute -bottom-4 -left-4 w-12 h-12 border border-vinho/40 rounded-full transition-transform duration-700 group-hover:-translate-y-2"></div>
+     </div>
+    </div>
+   </section><!-- PAGE 3: SERVIÇOS -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 40% 60%, rgba(74,13,31,0.35) 0%, #111111 70%);">
+    <div class="max-w-5xl mx-auto px-8 fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3 text-center">O que faço</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 text-center mb-10">SERVIÇOS</h2>
+     <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div class="glass-card rounded-xl p-5 text-center hover:scale-105 transition-transform"><i data-lucide="hexagon" class="w-8 h-8 mx-auto mb-3 text-bege/60"></i>
+       <p class="text-sm font-medium">Logos</p>
+      </div>
+      <div class="glass-card rounded-xl p-5 text-center hover:scale-105 transition-transform"><i data-lucide="mail" class="w-8 h-8 mx-auto mb-3 text-bege/60"></i>
+       <p class="text-sm font-medium">Convites</p>
+      </div>
+      <div class="glass-card rounded-xl p-5 text-center hover:scale-105 transition-transform"><i data-lucide="instagram" class="w-8 h-8 mx-auto mb-3 text-bege/60"></i>
+       <p class="text-sm font-medium">Posts Instagram</p>
+      </div>
+      <div class="glass-card rounded-xl p-5 text-center hover:scale-105 transition-transform"><i data-lucide="layers" class="w-8 h-8 mx-auto mb-3 text-bege/60"></i>
+       <p class="text-sm font-medium">Identidade Visual</p>
+      </div>
+      <div class="glass-card rounded-xl p-5 text-center hover:scale-105 transition-transform col-span-2 md:col-span-1"><i data-lucide="box" class="w-8 h-8 mx-auto mb-3 text-bege/60"></i>
+       <p class="text-sm font-medium">Embalagens</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- PAGE 4: HABILIDADES -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 60% 30%, rgba(107,16,42,0.25) 0%, #111111 70%);">
+    <div class="max-w-3xl mx-auto px-8 w-full fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3 text-center">Ferramentas</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 text-center mb-10">HABILIDADES</h2>
+     <div class="space-y-7">
+      <div>
+       <div class="flex justify-between mb-2 text-sm">
+        <span>Canva</span><span class="text-bege/50">95%</span>
+       </div>
+       <div class="w-full h-[6px] bg-creme/10 rounded-full">
+        <div class="skill-bar" style="width:95%"></div>
+       </div>
+      </div>
+      <div>
+       <div class="flex justify-between mb-2 text-sm">
+        <span>Illustrator</span><span class="text-bege/50">80%</span>
+       </div>
+       <div class="w-full h-[6px] bg-creme/10 rounded-full">
+        <div class="skill-bar" style="width:80%"></div>
+       </div>
+      </div>
+      <div>
+       <div class="flex justify-between mb-2 text-sm">
+        <span>CapCut</span><span class="text-bege/50">88%</span>
+       </div>
+       <div class="w-full h-[6px] bg-creme/10 rounded-full">
+        <div class="skill-bar" style="width:88%"></div>
+       </div>
+      </div>
+      <div>
+       <div class="flex justify-between mb-2 text-sm">
+        <span>After Effects</span><span class="text-bege/50">70%</span>
+       </div>
+       <div class="w-full h-[6px] bg-creme/10 rounded-full">
+        <div class="skill-bar" style="width:70%"></div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section><!-- PAGE 5: PROJETO 1 -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 30% 70%, rgba(74,13,31,0.3) 0%, #111111 70%);">
+    <div class="max-w-4xl mx-auto px-8 w-full fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3">Destaque</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 mb-6">Café Origem</h2>
+     <div class="project-area glow overflow-hidden">
+      <img src="café origem embalagem.png" alt="Café Origem Embalagem" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer zoomable-img" data-title="Café Origem" data-desc="Projeto completo de identidade visual e design de embalagem para o Café Origem. O foco principal foi criar um visual moderno e elegante destacando a qualidade premium do grão." data-service="Identidade Visual & Embalagem" data-audience="Apreciadores de cafés especiais" />
+     </div>
+     <p class="text-bege/60 text-sm mt-4">Projeto completo de identidade visual e design de embalagem para o Café Origem. O grande foco deste projeto foi criar um design moderno e elegante que atraísse o público apreciador de cafés especiais. A paleta de cores terrosas misturada a detalhes minimalistas destaca a qualidade premium e a procedência do produto diretamente das fazendas produtoras.</p>
+    </div>
+   </section><!-- PAGE 6: PROJETO 2 -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 70% 30%, rgba(107,16,42,0.3) 0%, #111111 70%);">
+    <div class="max-w-4xl mx-auto px-8 w-full fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3">Destaque</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 mb-6">Aikos Embalagens</h2>
+     <div class="project-area glow overflow-hidden">
+      <img src="Aikos embalagens.png" alt="Aikos Embalagens" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer zoomable-img" data-title="Aikos Embalagens" data-desc="Criação de identidade visual e layout de embalagem para a linha de produtos Aikos. Foco em transmitir confiança e sobressair estrategicamente nas gôndolas." data-service="Design de Embalagem" data-audience="Consumidores de varejo premium" />
+     </div>
+     <p class="text-bege/60 text-sm mt-4">Criação de identidade visual e layout de embalagem para a linha de produtos Aikos. O briefing exigia um design que sobressaísse nas gôndolas e transmitisse confiança e sofisticação. Utilizando tipografia arrojada e um padrão visual único, a essência da marca foi materializada de forma altamente estratégica para o mercado competitivo.</p>
+    </div>
+   </section><!-- PAGE 7: PROJETO 3 -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 50% 50%, rgba(74,13,31,0.35) 0%, #111111 70%);">
+    <div class="max-w-4xl mx-auto px-8 w-full fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3">Destaque</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 mb-6">Convite Jardim Encantado</h2>
+     <div class="project-area glow overflow-hidden">
+      <img src="Convite Virtual de Aniversário Infantil de Borboletas Jardim Encantado Feminino Rosa.png" alt="Convite Virtual Jardim Encantado" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 cursor-pointer zoomable-img" data-title="Jardim Encantado" data-desc="Design exclusivo para um convite virtual interativo infantil inspirado no tema lúdico de Jardim Encantado com borboletas, mesclando tons pastéis e excelente usabilidade." data-service="Convite Digital Interativo" data-audience="Convidados de evento infantil" />
+     </div>
+     <p class="text-bege/60 text-sm mt-4">Design exclusivo para um convite virtual interativo infantil inspirado no tema lúdico de Jardim Encantado com borboletas. A paleta utiliza tons pastéis em rosa e dourado, unindo delicadeza, magia e excelente usabilidade para leitura em dispositivos móveis, encantando os convidados desde o primeiro momento.</p>
+    </div>
+   </section><!-- PAGE 8: GALERIA -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 40% 40%, rgba(107,16,42,0.25) 0%, #111111 70%);">
+    <div class="max-w-5xl mx-auto px-8 w-full fade-up">
+     <p class="text-xs tracking-[0.3em] text-vinho uppercase mb-3 text-center">Trabalhos</p>
+     <h2 class="font-display text-4xl md:text-5xl font-800 text-center mb-8">GALERIA</h2>
+     <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-bordo/20 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="Babylumi embalagem.jpeg" alt="Galeria 1" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Projeto Babylumi" data-desc="Concepção visual aconchegante e atraente para a marca, utilizando tons convidativos e layout lúdico para comunicação estratégica com seu público logotipado." data-service="Criação Visual Embalagem" data-audience="Mães e setor infantil" />
+      </div>
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-vinho/20 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="Dia das mães - 1.png" alt="Galeria 2" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Especial Mães" data-desc="Peça publicitária sentimental criada especialmente para celebrar e impulsionar conexões no Dia das Mães, envolvendo total delicadeza e afeto na estética." data-service="Design para Redes Sociais" data-audience="Consumidores de varejo" />
+      </div>
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-bordo/15 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="Divulgação games escola.jpeg" alt="Galeria 3" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Games Escolares" data-desc="Material gráfico voltado à divulgação de competições de jogos interativos em ambiente escolar, utilizando um apelo vibrante e energético." data-service="Banner / Peça Publicitária" data-audience="Jovens e estudantes" />
+      </div>
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-vinho/15 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="Aikos embalagens.png" alt="Galeria 4" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Aikos Design" data-desc="Variação visual do projeto Aikos focado na aplicação da marca para comunicação imersiva em embalagens retangulares." data-service="Layout de Posicionamento" data-audience="Consumidores premium" />
+      </div>
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-bordo/20 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="café origem embalagem.png" alt="Galeria 5" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Origem Premium" data-desc="Amostra da qualidade artística aplicada diretamente nos grãos e torra. Fio de ouro visual para destacar sabor autêntico na área rotulada." data-service="Identidade Premium Gráfica" data-audience="Baristas e apreciadores" />
+      </div>
+      <div class="aspect-square rounded-lg bg-gradient-to-br from-vinho/20 to-preto border border-creme/5 flex items-center justify-center overflow-hidden group">
+       <img src="Convite Virtual de Aniversário Infantil de Borboletas Jardim Encantado Feminino Rosa.png" alt="Galeria 6" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer zoomable-img" data-title="Convite Digital Fluído" data-desc="Apresentação em galeria do modelo de convite virtual infantil. Formato excelente e amigável para envio rápido via WhatsApp mantendo a magia das fontes aplicadas." data-service="Material Digital e Redes" data-audience="Parentes e pais jovens" />
+      </div>
+     </div>
+    </div>
+   </section><!-- PAGE 9: CONTATO -->
+   <section class="page subtle-grid" style="background: radial-gradient(ellipse at 50% 60%, rgba(74,13,31,0.4) 0%, #111111 70%);">
+    <div class="max-w-4xl mx-auto px-8 flex flex-col md:flex-row items-center gap-12 fade-up">
+     <div class="flex-1">
+      <h2 class="font-display text-3xl md:text-5xl font-800 mb-8">VAMOS TRABALHAR<br>
+       JUNTOS?</h2>
+      <div class="space-y-5">
+       <div class="flex items-center gap-4">
+        <i data-lucide="instagram" class="w-5 h-5 text-vinho"></i><span class="text-bege/80" id="el-instagram">@monyksdesign</span>
+       </div>
+       <div class="flex items-center gap-4">
+        <i data-lucide="phone" class="w-5 h-5 text-vinho"></i><span class="text-bege/80" id="el-whatsapp">11 98610-6377</span>
+       </div>
+       <div class="flex items-center gap-4">
+        <i data-lucide="mail" class="w-5 h-5 text-vinho"></i><span class="text-bege/80" id="el-email">sarah11monyque@gmail.com</span>
+       </div>
+       <div class="flex items-center gap-4">
+        <i data-lucide="map-pin" class="w-5 h-5 text-vinho"></i><span class="text-bege/80">Cotia - SP</span>
+       </div>
+      </div>
+     </div>
+     <div class="flex-shrink-0">
+      <div class="mockup-phone glow flex items-center justify-center">
+       <div class="w-[80%] h-[80%] mt-4 rounded-xl bg-gradient-to-b from-bordo/20 to-preto flex items-center justify-center"><i data-lucide="sparkles" class="w-8 h-8 text-creme/20"></i>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+  </div>
+
+   <!-- IMAGE MODAL -->
+   <div id="image-modal" class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-md opacity-0 transition-opacity duration-500">
+    <button id="close-modal" class="fixed top-6 right-6 text-creme/70 hover:text-creme transition-colors bg-preto/50 rounded-full p-2 hover:bg-vinho/90 shadow-[0_0_20px_rgba(107,16,42,0.5)] z-50">
+     <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <!-- 3D container -->
+    <div class="relative w-full h-full max-w-[95vw] max-h-[95vh] p-2 md:p-6 flex items-center justify-center" style="perspective: 1500px;">
+     <div id="modal-content" class="relative rounded-2xl overflow-hidden shadow-[0_40px_80px_rgba(107,16,42,0.8)] border border-creme/20 transform-gpu opacity-0 transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] bg-preto flex flex-col md:flex-row w-full h-full" style="transform-style: preserve-3d; transform: scale(0.85) rotateX(15deg) rotateY(-10deg) translateZ(-100px);">
+      <!-- IMAGE SIDE -->
+      <div class="relative flex-1 bg-[#0a0a0a] flex flex-col items-center justify-center min-h-[40vh] p-2 md:p-6">
+       <img id="modal-image" src="" alt="Zoom" class="w-auto h-auto max-w-full max-h-full object-contain rounded-xl shadow-2xl" />
+       <div class="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-black/30 pointer-events-none mix-blend-overlay"></div>
+      </div>
+      <!-- DETAILS SIDE -->
+      <div class="w-full md:w-[450px] p-8 flex flex-col bg-gradient-to-b from-[#2a0812] to-preto border-l border-creme/10 relative z-10 overflow-y-auto h-full">
+       <h3 id="modal-title" class="font-display text-4xl font-800 text-creme mb-4">Título do Projeto</h3>
+       <p id="modal-desc" class="text-bege/70 text-sm mb-8 leading-relaxed">Detalhes do projeto vão aqui.</p>
+       <div class="space-y-6 mb-8">
+        <div>
+         <span class="text-[10px] uppercase tracking-[0.2em] text-vinho font-900 block mb-1">Serviço Realizado</span>
+         <span id="modal-service" class="text-creme/90 text-sm font-medium">Criação de Imagem</span>
+        </div>
+        <div>
+         <span class="text-[10px] uppercase tracking-[0.2em] text-vinho font-900 block mb-1">Público-Alvo</span>
+         <span id="modal-audience" class="text-creme/90 text-sm font-medium">Público Geral</span>
+        </div>
+        <div>
+         <span class="text-[10px] uppercase tracking-[0.2em] text-vinho font-900 block mb-1">Direitos Autorais</span>
+         <span class="text-creme/90 text-sm font-medium flex items-center gap-2"><i data-lucide="copyright" class="w-4 h-4 text-creme/50"></i> Criada por Sarah Monyque</span>
+        </div>
+       </div>
+       <div class="mt-auto pt-4 border-t border-creme/10 flex items-center justify-between">
+        <span class="text-[10px] text-creme/40 uppercase tracking-widest font-500">Portfólio Criativo</span>
+        <i data-lucide="sparkles" class="w-4 h-4 text-vinho"></i>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+
+  <script>
+    lucide.createIcons();
+
+    // Modal Zoom 3D Logic
+    const modal = document.getElementById('image-modal');
+    const modalContent = document.getElementById('modal-content');
+    const modalImage = document.getElementById('modal-image');
+    const closeModal = document.getElementById('close-modal');
+    const zoomableImgs = document.querySelectorAll('.zoomable-img');
+
+    zoomableImgs.forEach(img => {
+      img.addEventListener('click', () => {
+        modalImage.src = img.src;
+        
+        // Povoa o as informacoes do painel lateral
+        document.getElementById('modal-title').textContent = img.dataset.title || 'Portfólio Sarah Monyque';
+        document.getElementById('modal-desc').textContent = img.dataset.desc || 'Conheça um pouco mais sobre o conceito visual deste trabalho.';
+        document.getElementById('modal-service').textContent = img.dataset.service || 'Design Gráfico Profissional';
+        document.getElementById('modal-audience').textContent = img.dataset.audience || 'Geral/Empresas';
+
+        modal.classList.remove('hidden');
+        // trigger animation frame for transitions
+        requestAnimationFrame(() => {
+          modal.classList.remove('opacity-0');
+          modalContent.style.transform = 'scale(1) rotateX(0deg) rotateY(0deg) translateZ(0)';
+          modalContent.classList.remove('opacity-0');
+          modalContent.classList.add('opacity-100');
+        });
+      });
+    });
+
+    function hideModal() {
+      modal.classList.add('opacity-0');
+      modalContent.style.transform = 'scale(0.85) rotateX(15deg) rotateY(-10deg) translateZ(-100px)';
+      modalContent.classList.remove('opacity-100');
+      modalContent.classList.add('opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        modalImage.src = "";
+      }, 500); // match transition duration
+    }
+
+    closeModal.addEventListener('click', hideModal);
+    modal.addEventListener('click', (e) => {
+      if(e.target === modal || e.target.parentElement === modal || e.target.closest('.relative.w-full.h-full') && !e.target.closest('#modal-content')) {
+        hideModal();
+      }
+    });
+
+    // Nav dots
+    const pages = document.querySelectorAll('.page');
+    const navContainer = document.getElementById('nav-dots');
+    pages.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+      dot.onclick = () => pages[i].scrollIntoView({ behavior: 'smooth' });
+      navContainer.appendChild(dot);
+    });
+
+    const container = document.getElementById('portfolio');
+    container.addEventListener('scroll', () => {
+      const scrollPos = container.scrollTop;
+      const dots = navContainer.querySelectorAll('.nav-dot');
+      pages.forEach((page, i) => {
+        if (scrollPos >= page.offsetTop - window.innerHeight / 2) {
+          dots.forEach(d => d.classList.remove('active'));
+          dots[i].classList.add('active');
+        }
+      });
+    });
+
+    // Element SDK
+    const defaultConfig = {
+      hero_title: 'PORTFÓLIO CRIATIVO',
+      hero_name: 'SARAH MONYQUE',
+      about_text: 'Designer apaixonada por transformar ideias em identidades visuais marcantes. Especializada em criar artes modernas, sofisticadas e estratégicas para marcas e redes sociais.',
+      contact_instagram: '@monyksdesign',
+      contact_whatsapp: '11 98610-6377',
+      contact_email: 'sarah11monyque@gmail.com',
+      background_color: '#111111',
+      accent_color: '#6B102A',
+      text_color: '#F5E6D3',
+      font_family: 'Playfair Display',
+      font_size: 16
+    };
+
+    function applyConfig(config) {
+      document.getElementById('el-hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('el-hero-name').textContent = config.hero_name || defaultConfig.hero_name;
+      document.getElementById('el-about-text').textContent = config.about_text || defaultConfig.about_text;
+      document.getElementById('el-instagram').textContent = config.contact_instagram || defaultConfig.contact_instagram;
+      document.getElementById('el-whatsapp').textContent = config.contact_whatsapp || defaultConfig.contact_whatsapp;
+      document.getElementById('el-email').textContent = config.contact_email || defaultConfig.contact_email;
+
+      const font = config.font_family || defaultConfig.font_family;
+      document.querySelectorAll('.font-display').forEach(el => el.style.fontFamily = `${font}, serif`);
+
+      const size = config.font_size || defaultConfig.font_size;
+      document.querySelectorAll('.font-display').forEach(el => {
+        if (el.tagName === 'H1') el.style.fontSize = `${size * 3.5}px`;
+        else if (el.tagName === 'H2') el.style.fontSize = `${size * 2.5}px`;
+      });
+    }
+
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => applyConfig(config),
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.accent_color || defaultConfig.accent_color, set: (v) => { config.accent_color = v; window.elementSdk.setConfig({ accent_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } }
+        ],
+        borderables: [],
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['hero_title', config.hero_title || defaultConfig.hero_title],
+        ['hero_name', config.hero_name || defaultConfig.hero_name],
+        ['about_text', config.about_text || defaultConfig.about_text],
+        ['contact_instagram', config.contact_instagram || defaultConfig.contact_instagram],
+        ['contact_whatsapp', config.contact_whatsapp || defaultConfig.contact_whatsapp],
+        ['contact_email', config.contact_email || defaultConfig.contact_email]
+      ])
+    });
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9f82c54ae7c10d27',t:'MTc3ODE4MzYwNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
